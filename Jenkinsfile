@@ -11,11 +11,12 @@ pipeline {
                     archiveArtifacts artifacts: '**/target/*.war'
                 }
             }
-            stage('Deply to Staging'){
+            
+        }
+        stage('Deply to Staging'){
               steps{
                 build job: 'Deploy-to-staging'
               }
             }
-        }
     }
 }
