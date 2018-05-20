@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-      maven: 'localMaven'
+      maven 'localMaven'
     }
     stages{
         stage('Build'){
@@ -16,7 +16,7 @@ pipeline {
             }
             
         }
-        stage('Deply to Staging'){
+        stage('Deploy to Staging'){
               steps{
                 build job: 'Deploy-to-staging'
               }
